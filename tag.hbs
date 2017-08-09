@@ -1,0 +1,27 @@
+{{!-- Include the header from partials/header.hbs --}}
+{{> header}}
+
+
+              <section class="section section-default m-none pt-xlg" id="demos">
+
+                    {{#tag}}
+			<div class="row">
+				<div class="col-md-12 center pb-xl">
+				    <h3 class="mt-xlg pt-md mb-none">{{name}}</h3>
+
+				</div>
+			</div>		            
+                    {{/tag}}
+
+                    {{!-- Include the post loop from partials/loop.hbs --}}
+                    {{> loop}}
+
+                    {{> pagination}}
+
+                </section>
+
+
+
+
+{{!-- Include the footer from partials/footer.hbs --}}
+{{> footer}}

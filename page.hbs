@@ -1,0 +1,33 @@
+{{!-- Include the header from partials/header.hbs --}}
+{{> header}}
+
+{{!-- Switch to the post context --}}
+{{#post}}
+
+	<section class="section section-default m-none pt-xlg" id="demos">
+	      <div class="container-fluid sample-item-container">
+		<div class="row">
+			<div class="col-md-12 center pb-xl">
+			    <h2 class="mt-xlg pt-md mb-none">{{title editable="true"}}</h2>
+			</div>
+		</div>
+		<div class="row">
+		    <div class="col-md-12 center pb-xl">
+			{{!-- The `post_class` helper outputs useful classes for styling --}}
+			<article class="{{post_class}}">
+			    {{!-- The post content should have editable="true" here --}}
+			    <div class="post-content">
+			        {{content editable="true"}}
+			    </div>
+			</article>
+		    </div>
+		</div>
+	     </div>	
+	</section>
+
+    
+
+{{/post}}
+
+{{!-- Include the footer from partials/footer.hbs --}}
+{{> footer}}
